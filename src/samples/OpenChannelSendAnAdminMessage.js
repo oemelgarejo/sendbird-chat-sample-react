@@ -228,6 +228,7 @@ const OpenChannelSendAnAdminMessage = (props) => {
 
     const setupUser = async () => {
         const { userNameInputValue, userIdInputValue } = state;
+        
         const sendbirdChat = await SendbirdChat.init({
             appId: SENDBIRD_INFO.appId,
             localCacheEnabled: false,
@@ -236,8 +237,10 @@ const OpenChannelSendAnAdminMessage = (props) => {
 
         try {
             await sendbirdChat.connect(userIdInputValue);
+            console.log("setup user")
         } catch (e) {
             console.log("error", e)
+            console.log("setup user1")
         }
         await sendbirdChat.setChannelInvitationPreference(true);
 

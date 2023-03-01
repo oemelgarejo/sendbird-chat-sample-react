@@ -60,6 +60,7 @@ const BasicOpenChannelSample = (props) => {
     }
 
     const handleJoinChannel = async (channelUrl) => {
+        console.log('test')
         if (state.currentlyJoinedChannel?.url === channelUrl) {
             return null;
         }
@@ -230,6 +231,7 @@ const BasicOpenChannelSample = (props) => {
 
     const setupUser = async () => {
         const { userNameInputValue, userIdInputValue } = state;
+        console.log('setupUser')
         const sendbirdChat = await SendbirdChat.init({
             appId: SENDBIRD_INFO.appId,
             localCacheEnabled: false,

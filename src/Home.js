@@ -12,7 +12,7 @@ const Home = () => {
         </ul>
       </div>
       <div>
-        <h1>Open Channel Code Samples</h1>
+        <h1>Open Channel Code Samples</h1> 
         <ul>
           <li><Link to="/open-channel-send-an-admin-message">Open Channel Send an Admin message</Link></li>
           <li><Link to="/open-channel-message-threading">Open Channel Message Threading</Link></li>
